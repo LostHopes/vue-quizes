@@ -73,3 +73,9 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+# References
+
+1. [Vue Official Website](https://vuejs.org)
+2. [Nuxt Documentation](https://nuxt.com/docs)
+3. [Choosing the right Data Solution PDF](https://yalantis.com/wp-content/uploads/2024/01/choosing-the-right-data-storage-solution-for-appointment-scheduling-system.pdf)
