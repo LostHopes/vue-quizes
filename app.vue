@@ -1,13 +1,13 @@
 <script setup lang="ts">
 useHead({
-  titleTemplate: "Quizes | %s",
+  titleTemplate: (title) => {
+    return title ? `Quiz-app | ${title}` : "Quiz-app";
+  }
 })
 </script>
 
 <template>
-  <div>
-    <BaseHeader />
-
-    <BaseFooter />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
