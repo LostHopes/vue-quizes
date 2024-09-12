@@ -5,5 +5,5 @@ useHead({
 </script>
 
 <template>
-    
+    <FormRegister />
 </template>

@@ -20,3 +20,10 @@ model User {
 model Quiz {
   id         Int        @id @default(autoincrement())
 }
+
+model Article {
+  id              Int        @id @default(autoincrement())
+  title           String?    @unique
+  published_at    DateTime   @default(now())
+  user_id         Int
+}
