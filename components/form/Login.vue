@@ -12,7 +12,7 @@ export default {
 </script>
 <template>
     <div class="m-40 p-20 rounded-2xl">
-        <form method="post" class="flex flex-col justify-between items-center space-y-4">
+        <form method="post" class="flex flex-col justify-center items-center space-y-4">
 
             <div class="flex flex-col space-y-4">
                 <label for="email">Email</label>

@@ -15,6 +15,7 @@ model User {
   login      String?    @unique
   email      String?    @unique
   password   String?
+  role       String?
 }
 
 model Quiz {
@@ -26,4 +27,9 @@ model Article {
   title           String?    @unique
   published_at    DateTime   @default(now())
   user_id         Int
+}
+
+model Question {
+  id              Int        @id @default(autoincrement())
+  quid_id         Int
 }
