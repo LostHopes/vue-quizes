@@ -10,26 +10,36 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id         Int        @id @default(autoincrement())
-  login      String?    @unique
-  email      String?    @unique
-  password   String?
-  role       String?
+model user {
+  user_id    Int             @id @default(autoincrement())
+  login      String          @unique
+  email      String          @unique
+  password   String
+  role       String
+  article    article[]
+  quiz       quiz[]
 }
 
-model Quiz {
-  id         Int        @id @default(autoincrement())
+model quiz {
+  quiz_id         Int        @id @default(autoincrement())
+  name            String     @unique
+  finished_times  Int
+  creator_id      Int
+  question        question[]
+  user            user       @relation(fields: [creator_id], references: [user_id])
 }
 
-model Article {
-  id              Int        @id @default(autoincrement())
-  title           String?    @unique
+model article {
+  article_id      Int        @id @default(autoincrement())
+  title           String     @unique
+  category        String
   published_at    DateTime   @default(now())
-  user_id         Int
+  author_id       Int
+  user            user       @relation(fields: [author_id], references: [user_id])
 }
 
-model Question {
-  id              Int        @id @default(autoincrement())
-  quid_id         Int
+model question {
+  question_id     Int        @id @default(autoincrement())
+  name            String
+  quiz            quiz       @relation(fields: [question_id], references: [quiz_id])
 }
