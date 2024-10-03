@@ -7,7 +7,6 @@ export default {
         link: String,
     }
 }
-
 </script>
 
 <template>
