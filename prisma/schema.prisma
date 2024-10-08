@@ -22,7 +22,7 @@ model user {
 
 model quiz {
   quiz_id         Int        @id @default(autoincrement())
-  name            String     @unique
+  title           String     @unique
   finished_times  Int
   creator_id      Int
   question        question[]
